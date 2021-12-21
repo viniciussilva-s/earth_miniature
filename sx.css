@@ -1,0 +1,27 @@
+body {
+    background-color: black;
+    text-align: center;
+  }
+  
+  #svg {
+    margin: 10px;
+  }
+  
+  #logo, #lines, #ByGreenSock, #DrawSVG, #Plugin {
+    visibility: hidden;
+  }
+  
+  #slider {
+    width:400px;
+    margin:30px auto;
+    background-color: #222;
+    display: inline-block;
+  }
+  
+  #slider, #slider a {
+    background-image: none;
+    border: 1px solid #555;
+  }
+  #slider a {
+    background-color: #444;
+  }

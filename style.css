@@ -1,0 +1,93 @@
+.parallax{
+    width: 100px;
+    height: 100px;
+    background-color: bisque;
+     position: relative;
+     animation: animationParallax 1.5s infinite;
+}
+
+@keyframes animationParallax {
+    from {top:0px;}
+    to {top:60px;}
+}
+
+/* Parallax CSS */
+.background-oregon-grapes {
+    background-image: url("http://aeoneal.com/imagery/blog/oregon-grapes.jpg");
+    background-size: 100%;
+    height: 560px;
+    width: 560px;
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    background-position: top;
+    /* background-attachment: fixed; */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media (max-width: 767px) {
+    .background-oregon-grapes {
+      height: 330px;
+      width: 330px;
+    }
+  }
+  
+  
+  /* Image CSS for your SVG */
+  img {
+    height: 100%;
+    width: 100%;
+  }
+  
+
+  
+
+HTML, BODY {
+    height: 100%;
+    }
+  
+  $colors: #360745, #D61C59, #E7D84B, #EFEAC5, #1B8798;
+  
+  BODY {
+    background: hsl(200,70,11);
+    background-size: .12em 100%;
+    font: 16em/1 Arial;
+  }
+  
+  .text--line {
+    font-size: .5em;
+    }
+  
+  svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    }
+  
+  $max: 5;
+  $stroke-step: 7%; 
+  .text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: $stroke-step $stroke-step * ($max - 1);
+    stroke-width: 3px;
+    
+    animation: stroke-offset 9s infinite linear;
+    
+    @for $item from 1 through $max {
+      $stroke-color: nth($colors, $item);
+      
+      &:nth-child(#{$item}) {
+        stroke: $stroke-color;
+        stroke-dashoffset: $stroke-step * $item;
+        }
+      }
+    }
+  
+  @keyframes stroke-offset {
+    50% {
+      stroke-dashoffset: $stroke-step * $max;  
+      stroke-dasharray: 0 $stroke-step * $max*2.5;
+    }
+  }
+  
+  

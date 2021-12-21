@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang='pt-br'>
+
+<head>
+    <title>Title </title>
+    <!-- Required meta tags -->
+    <meta charset='utf-8'>
+    <meta http-equiv='Content-Type' content='text/html;charset=utf-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body bgcolor="black">
+
+    <!-- <div class="parallax"></div> -->
+    <div id="bgearth" class="earth-js earth-container earth-ready">
+        <canvas width="350" height="350" style="width: 350px; height: 350px;"></canvas>
+    </div>
+
+
+
+
+    <!-- <svg viewBox="0 0 800 600">
+        <symbol id="s-text">
+            <text text-anchor="middle" x="50%" y="35%" class="text--line">
+                Vinicius
+            </text>
+            <text text-anchor="middle" x="50%" y="68%" class="text--line2">
+                Stroke
+            </text>
+
+        </symbol>
+
+        <g class="g-ants">
+            <use xlink:href="#s-text" class="text-copy"></use>
+            <use xlink:href="#s-text" class="text-copy"></use>
+            <use xlink:href="#s-text" class="text-copy"></use>
+            <use xlink:href="#s-text" class="text-copy"></use>
+            <use xlink:href="#s-text" class="text-copy"></use>
+        </g>
+
+
+    </svg>
+
+
+    <div class="cldiv">
+
+        <div class="background-oregon-grapes">
+
+        </div>
+
+    </div> -->
+    <!-- 
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p> -->
+    <!-- <script src='./assets/js/index.js'></script> -->
+
+    <script src="./miniature.earth.js"></script>
+    <script>
+
+        // window.addEventListener('load', function () {
+        //     var script = document.createElement("script");
+        //     script.src = "miniature.earth.js";
+        //     document.body.appendChild(script);
+        // });
+
+
+
+        window.addEventListener("earthjsload", function () {
+
+            new Earth("bgearth", {
+                location: { lat: -20, lng: 1000 },
+                light: 'none',
+                autoRotate: true,
+                autoRotateDelay: 0,
+                autoRotateStart: 1500,
+                mapLandColor: 'transparent',
+                mapSeaColor: 'transparent',
+                mapBorderColor: 'white',
+                mapBorderWidth: 0.22,
+                transparent: true,
+                zoom: 1.4,
+                quality: 4,
+                draggable: true
+            });
+
+        });
+
+    </script>
+</body>
+
+</html>
